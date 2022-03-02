@@ -1,0 +1,16 @@
+html,
+body,
+#root {
+    height: 100%;
+    background-color: #212221;
+}
+.dark-accent {
+    background-color: #212221;
+}
+.light-accent {
+    background-color: #262626;
+}
+
+.divider-color {
+    border-color: #2C2C2D;
+}
