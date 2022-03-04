@@ -14,3 +14,4 @@ Desktop app for tracking in-game daily and weekly tasks.
 | Backup config      | ❌ Not started        |
 | Config checker      | ❌ Not started        |
 | Auto update      | ❌ Not started        |
+| CI Builds      | ❌ Not started        |
