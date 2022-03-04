@@ -8,9 +8,9 @@ use roster::Roster;
 use serde::{Deserialize, Serialize};
 use std::error::Error;
 use std::fs::{write, File};
-use std::io::{BufReader, BufWriter};
+use std::io::BufReader;
 use std::path::{Path, PathBuf};
-use std::time::{Duration, Instant};
+use std::time::Instant;
 use tauri::AppHandle;
 
 use crate::roster::{RosterDailies, RosterWeeklies};
@@ -29,12 +29,8 @@ fn main() {
             let config_dir = app.path_resolver().resource_dir().unwrap();
             let config_path = config_dir.join(CONFIG_NAME);
             println!("App data directory: {:?}", config_path);
-            if config_path.exists() {
-                println!("Config exists, loading config from {:?}", config_path);
-                let config = read_config(config_path).unwrap();
-                println!("Config loaded: {:?}", config);
-            } else {
-                println!("Creating config file {:?}", config_path);
+            if !config_path.exists() {
+                println!("No config found, creating default at: {:?}", config_path);
                 let default_config = Config {
                     characters: vec![],
                     roster: Roster {

@@ -5,7 +5,7 @@ import ClassIcon from "./ClassIcon";
 interface SidebarItemProps {
     name: string;
     path: string;
-    gameClass?: number;
+    game_class?: number;
 }
 const SidebarItem: Component<SidebarItemProps> = (props) => {
     const [selected, setSelected] = createSignal(false);
@@ -28,10 +28,10 @@ const SidebarItem: Component<SidebarItemProps> = (props) => {
                     selectedStyles()
                 }
             >
-                {props.gameClass && (
+                {props.game_class && (
                     <ClassIcon
                         selected={selected()}
-                        gameClass={props.gameClass}
+                        gameClass={props.game_class}
                     />
                 )}
                 <p className={"font-semibold text-sm " + selectedText()}>

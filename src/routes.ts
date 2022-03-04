@@ -1,8 +1,6 @@
 import { lazy } from "solid-js";
 import type { RouteDefinition } from "solid-app-router";
 
-import AboutData from "./pages/about.data";
-
 export const routes: RouteDefinition[] = [
     {
         path: "/",
@@ -11,7 +9,6 @@ export const routes: RouteDefinition[] = [
     {
         path: "/character/:id",
         component: lazy(() => import("./pages/character/[id]")),
-        data: AboutData,
     },
     {
         path: "**",

@@ -17,7 +17,7 @@ const App: Component = () => {
 
     return (
         <Show when={config()}>
-            <div className="w-full flex flex-col h-full dark-accent">
+            <div className="w-full flex flex-col h-full overflow-hidden dark-accent">
                 <Navbar />
                 <div className="w-full h-full flex flex-row">
                     <Sidebar />

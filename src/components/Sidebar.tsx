@@ -13,7 +13,7 @@ const Sidebar: Component = () => {
                     {(character) => (
                         <SidebarItem
                             name={character.name}
-                            gameClass={character.class}
+                            game_class={character.game_class}
                             path={"/character/" + character.id}
                         />
                     )}

@@ -21,16 +21,10 @@ export interface Config {
 export interface Character {
     id: string;
     name: string;
-    class: number;
+    game_class: number;
     dailies: {
-        chaos_dungeon: {
-            first: boolean;
-            second: boolean;
-        };
-        guardian_raid: {
-            first: boolean;
-            second: boolean;
-        };
+        chaos_dungeon: boolean;
+        guardian_raid: boolean;
         una: {
             first: boolean;
             second: boolean;
